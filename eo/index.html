@@ -1,0 +1,142 @@
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="J" />
+    <meta property="og:title" content="Sedução Oculta" />
+    <meta
+      property="og:description"
+      content="Saiba como deixar as mulheres completamente viciadas em você!"
+    />
+    <meta property="og:url" content="https://seducaooculta.online/" />
+    <meta
+      property="og:site_name"
+      content="Saiba como deixar as mulheres completamente viciadas em você!"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://seducaooculta.online/main/img/img-meta.png"
+    />
+
+    <title>Sedução Oculta</title>
+
+    <link rel="shortcut icon" href="img/fav.png" />
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      .bt_pulsar {
+        -webkit-animation: pulse 0.7s infinite;
+      }
+
+      .bt_pulsar:hover {
+        -webkit-animation: none;
+      }
+
+      @-webkit-keyframes pulse {
+        0% {
+          @include transform(scale(0.9));
+        }
+        70% {
+          @include transform(scale(1));
+          box-shadow: 0 0 0 50px rgba(#5a99d4, 0);
+        }
+        100% {
+          @include transform(scale(0.9));
+          box-shadow: 0 0 0 0 rgba(#5a99d4, 0);
+        }
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-top: 50px;
+        margin-right: auto;
+        width: 300px;
+      }
+      .av {
+        display: block;
+        margin-left: auto;
+        margin-top: 10px;
+        margin-right: auto;
+        width: 150px;
+      }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+          "gtm.start": new Date().getTime(),
+          event: "gtm.js",
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-N4MDR65");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Pixel Do Facebook Na Linha Abaixo -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N4MDR65"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <center>
+      <div class="row begin-countdown">
+        <div class="col-md-12 text-center">
+          <h1 style="color: #ff5a5a">
+            <span id="pageBeginCountdownText">19 </span>
+          </h1>
+          <progress value="19" max="19" id="pageBeginCountdown"></progress>
+        </div>
+      </div>
+      <h1>Veja enquanto ainda está Online</h1>
+      <a href="/py">
+        <img class="pres" src="img/pres.png" />
+      </a>
+      <button class="bt_pulsar" id="btn1">
+        Clique aqui para Assistir Agora!
+      </button>
+      <img class="av" src="img/av.png" />
+    </center>
+    <script type="text/javascript">
+      ProgressCountdown(19, "pageBeginCountdown", "pageBeginCountdownText");
+
+      function ProgressCountdown(timeleft, bar, text) {
+        return new Promise((resolve, reject) => {
+          var countdownTimer = setInterval(() => {
+            timeleft--;
+
+            document.getElementById(bar).value = timeleft;
+            document.getElementById(text).textContent = timeleft;
+
+            if (timeleft <= 0) {
+              clearInterval(countdownTimer);
+              resolve(true);
+            }
+          }, 1000);
+        });
+      }
+    </script>
+    <script>
+      document.getElementById("btn1").addEventListener("click", function () {
+        var hashstlp = "URL CRIPTOGRAFADA AQUI";
+        location.href = atob(hashstlp);
+      });
+    </script>
+  </body>
+</html>
