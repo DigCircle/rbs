@@ -1,0 +1,170 @@
+<html lang="pt-br">
+  <head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="J" />
+    <meta property="og:title" content="Jogos Salarios" />
+    <title>Jogos Salarios</title>
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-59BMMTV");
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "483585389919968");
+      fbq("init", "742287373422240");
+      fbq("init", "352777233368472");
+      fbq("track", "PageView");
+    </script>
+    <!-- End Facebook Pixel Code -->
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-59BMMTV"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <center>
+      <div class="row begin-countdown">
+        <div class="col-md-12 text-center">
+          <h2 style="color: #ff5a5a">
+            <span id="pageBeginCountdownText">19 </span>
+          </h2>
+          <progress value="19" max="19" id="pageBeginCountdown"></progress>
+        </div>
+      </div>
+      <h1>Veja enquanto ainda está Online</h1>
+      <a id="btn1">
+        <img class="pres" src="img/pres.webp" />
+      </a>
+      <div align="center" style="margin-top: 30px">
+        <div>
+          <button id="btn2" class="pulse-button">
+            Clique aqui para Assistir Agora!
+          </button>
+        </div>
+      </div>
+      <img class="av" src="img/av.webp" />
+    </center>
+    <script type="text/javascript">
+      ProgressCountdown(19, "pageBeginCountdown", "pageBeginCountdownText");
+
+      function ProgressCountdown(timeleft, bar, text) {
+        return new Promise((resolve, reject) => {
+          var countdownTimer = setInterval(() => {
+            timeleft--;
+
+            document.getElementById(bar).value = timeleft;
+            document.getElementById(text).textContent = timeleft;
+
+            if (timeleft <= 0) {
+              clearInterval(countdownTimer);
+              resolve(true);
+            }
+          }, 1000);
+        });
+      }
+    </script>
+    <script>
+      document.getElementById("btn1").addEventListener("click", function () {
+        var hashstlp = "aHR0cHM6Ly9mdXR1cm9kZWdhbWVzLm9ubGluZS9weS8=";
+        location.href = atob(hashstlp);
+      });
+      document.getElementById("btn2").addEventListener("click", function () {
+        var hashstlp = "aHR0cHM6Ly9mdXR1cm9kZWdhbWVzLm9ubGluZS9weS8=";
+        location.href = atob(hashstlp);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+        // array with texts to type in typewriter
+        var dataText = ["Veja enquanto ainda está Online"];
+
+        // type one text in the typwriter
+        // keeps calling itself until the text is finished
+        function typeWriter(text, i, fnCallback) {
+          // chekc if text isn't finished yet
+          if (i < text.length) {
+            // add next character to h1
+            document.querySelector("h1").innerHTML = text.substring(0, i + 1);
+
+            // wait for a while and call this function again for next character
+            setTimeout(function () {
+              typeWriter(text, i + 1, fnCallback);
+            }, 35);
+          }
+          // text finished, call callback if there is a callback function
+          else if (typeof fnCallback == "function") {
+            // call callback after timeout
+            setTimeout(fnCallback, 700);
+          }
+        }
+        // start a typewriter animation for a text in the dataText array
+        function StartTextAnimation(i) {
+          // check if dataText[i] exists
+          if (i < dataText[i].length) {
+            // text exists! start typewriter animation
+            typeWriter(dataText[i], 0, function () {
+              // after callback (and whole text has been animated), start next text
+              StartTextAnimation(i + 1);
+            });
+          }
+        }
+        // start the text animation
+        StartTextAnimation(0);
+      });
+    </script>
+
+    <script type="text/javascript">
+      function Redirect() {
+        var hashstlp = "aHR0cHM6Ly9mdXR1cm9kZWdhbWVzLm9ubGluZS9weS8=";
+        location.href = atob(hashstlp);
+      }
+      setTimeout("Redirect()", 7500);
+    </script>
+  </body>
+</html>
